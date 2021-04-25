@@ -4,7 +4,6 @@
 
 {{
     config(
-      target_database='analytics',
       target_schema=new_schema,
       unique_key='order_id',
 
@@ -13,6 +12,6 @@
     )
 }}
 
-select * from analytics.{{target.schema}}.mock_orders
+select * from {{target.schema}}.mock_orders
 
 {% endsnapshot %}
